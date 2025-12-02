@@ -15,7 +15,6 @@ CXX						=		g++
 ###############################################################################
 
 OBJ_DIR					=		obj
-SRC_DIR					=		src
 
 ###############################################################################
 ###									FLAGS									###
@@ -27,9 +26,11 @@ CFLAGS					=		-std=c++98 -Wall -Wextra -Werror
 ###									FILES									###
 ###############################################################################
 
+HEADER					=		Class.hpp
+
 SRC						=		main.cpp PhoneBook.cpp Contact.cpp ContactUtils.cpp
 
-OBJ						=		$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+OBJ						=		$(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 ###############################################################################
 ###									ARCHIVES								###
@@ -40,7 +41,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 			$(CXX) $(CFLAGS) $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.cpp $(HEADER) | $(OBJ_DIR)
 			$(CXX) $(CFLAGS) -o $@ -c $<
 
 $(OBJ_DIR):

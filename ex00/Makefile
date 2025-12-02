@@ -15,7 +15,6 @@ CXX						=		g++
 ###############################################################################
 
 OBJ_DIR					=		obj
-SRC_DIR					=		src
 
 ###############################################################################
 ###									FLAGS									###
@@ -29,7 +28,7 @@ CFLAGS					=		-std=c++98 -Wall -Wextra -Werror
 
 SRC						=		megaphone.cpp
 
-OBJ						=		$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+OBJ						=		$(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 ###############################################################################
 ###									ARCHIVES								###
@@ -40,7 +39,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 			$(CXX) $(CFLAGS) $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
 			$(CXX) $(CFLAGS) -o $@ -c $<
 
 $(OBJ_DIR):
