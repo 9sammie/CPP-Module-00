@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 19:57:52 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/10 09:32:29 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/05 11:22:40 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	main() {
 	
 	while (true) {
 		
+		if (!std::getline(std::cin, input)) break; // handle ctr D
 		std::cout << "Enter the command ADD, SEARCH or EXIT: ";
-		if (!std::getline(std::cin, input)) break;
 		if (input == "ADD") PhoneBook.Add();
 		else if (input == "SEARCH") PhoneBook.Search();
 		else if (input == "EXIT") break;

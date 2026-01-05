@@ -6,12 +6,15 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 15:02:42 by maballet          #+#    #+#             */
-/*   Updated: 2025/11/26 13:58:11 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/05 09:22:15 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<iostream>
 #include<cctype>
+
+// std::cout will output on the standard stream any character(s) you give him after the "<<".
+// First time using a for loop.
 
 int	main(int argc, char **argv)
 {
