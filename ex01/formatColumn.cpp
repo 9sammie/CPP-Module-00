@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contactUtils.cpp                                   :+:      :+:    :+:   */
+/*   ContactUtils.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 21:33:28 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/01 21:35:48 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/08 11:31:22 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Class.hpp"
+#include "Contact.hpp"
 
 std::string formatColumn(std::string s) {
 

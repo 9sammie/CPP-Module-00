@@ -6,15 +6,15 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 19:54:28 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/05 11:05:08 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/08 11:31:37 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Class.hpp"
+#include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void): nextIndex(0) {} //constructor
+PhoneBook::PhoneBook(void): nextIndex(0) {}
 
-PhoneBook::~PhoneBook(void) {} //destructor
+PhoneBook::~PhoneBook(void) {}
 
 bool	isInputPrintable(std::string input) {
 
@@ -49,8 +49,6 @@ void	PhoneBook::Add() {
 	if (++nextIndex > 7)
 		nextIndex = 0;
 }
-
-// setw
 
 void	PhoneBook::Search() const {
 

@@ -26,9 +26,9 @@ CFLAGS					=		-std=c++98 -Wall -Wextra -Werror
 ###									FILES									###
 ###############################################################################
 
-HEADER					=		Class.hpp
+HEADER					=		Contact.hpp
 
-SRC						=		main.cpp PhoneBook.cpp Contact.cpp ContactUtils.cpp
+SRC						=		main.cpp PhoneBook.cpp Contact.cpp formatColumn.cpp
 
 OBJ						=		$(SRC:%.cpp=$(OBJ_DIR)/%.o)
 

@@ -6,11 +6,11 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 19:51:55 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/05 11:10:57 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/08 11:28:33 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Class.hpp"
+#include "Contact.hpp"
 
 Contact::Contact( void ) {}
 
