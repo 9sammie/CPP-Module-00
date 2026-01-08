@@ -6,13 +6,13 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 19:54:28 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/08 11:31:37 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/08 15:53:04 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void): nextIndex(0) {}
+PhoneBook::PhoneBook(void): _nextIndex(0) {}
 
 PhoneBook::~PhoneBook(void) {}
 
@@ -45,9 +45,9 @@ void	PhoneBook::Add() {
 		std::cout << "Error: one of the field or more is empty." << std::endl;
 		return;
 	}
-	AllContact[nextIndex].setContact(f, l, n, p, d);
-	if (++nextIndex > 7)
-		nextIndex = 0;
+	_allContact[_nextIndex].setContact(f, l, n, p, d);
+	if (++_nextIndex > 7)
+		_nextIndex = 0;
 }
 
 void	PhoneBook::Search() const {
@@ -59,9 +59,9 @@ void	PhoneBook::Search() const {
 	<< std::setw(10) << "Nickname" << std::endl;
 	for (int i = 0; i < 8; i++) {
 
-		if (AllContact[i].isEmpty())
+		if (_allContact[i].isEmpty())
 			break;
-		AllContact[i].displayShort(i);
+		_allContact[i].displayShort(i);
 	}
 	std::cout << std::endl;
 	std::cout << "Enter the index you need: ";
@@ -73,9 +73,9 @@ void	PhoneBook::Search() const {
 		return;
 	}
 	std::cin.ignore(10000,'\n');
-	if (idx < 0 || idx > 7 || AllContact[idx].isEmpty()) {
+	if (idx < 0 || idx > 7 || _allContact[idx].isEmpty()) {
 		std::cout << "Keep it to the index you see." << std::endl;
 		return;
 	}
-	AllContact[idx].displayFull();
+	_allContact[idx].displayFull();
 }
